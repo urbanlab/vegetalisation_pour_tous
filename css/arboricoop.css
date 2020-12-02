@@ -1,0 +1,53 @@
+/*                                  PAGE ACCUEIL                                     */
+/* EN-TÊTE */
+#blocGaucheEnTete{
+    float: left;
+}
+#blocDroitEnTete p{
+    float: right;
+}
+#imageEnTete{
+    clear: both;
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/image/banniere.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* BLOC COMPTEURS */
+#blocNombres div{
+    float: left;
+    width: 22%;
+    margin-left: 10%;
+}
+.compteur{
+    font-size: xxx-large;
+}
+.blocCompteur span{
+    float: left;
+}
+.iconeCompteur{
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+#iconeArbresPlantes{
+    background-image: url("../img/dessin/arbre.png");
+}
+#iconeBailleurs{
+    background-image: url("../img/dessin/bailleur.png");
+}
+#iconeEntreprises{
+    background-image: url("../img/dessin/entreprise.png");
+}
+#imageCentrale{
+    clear: both;
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/image/miseEnSituation.png");
+    background-position: center;
+    background-size: cover;
+}

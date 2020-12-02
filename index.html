@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ArboriCoop</title>
+    <link rel="stylesheet" href="css/arboricoop.css">
 </head>
-<body>
+<body onload="setInterval(activerCompteur, 1000 * 2);">
     <div id="enTete">
         <nav>
-            <p>ArboriCoop</p>
-            <p>Quoi planter</p>
-            <p>Nous contacter</p>
+            <div id="blocGaucheEnTete">
+                <p>ArboriCoop</p>
+            </div>
+            <div id="blocDroitEnTete">
+                <p>Quoi planter</p>
+                <p>Nous contacter</p>
+                <p>Se connecter</p>
+            </div>
         </nav>
         <div id="imageEnTete"></div>
     </div>
 
     <div id="blocNombres">
-        <div id="nombreArbresPlantes"></div>
-        <div id="nombreBailleurs"></div>
-        <div id="nombreEntreprises"></div>
+        <div id="nombreArbresPlantes" class="blocCompteur">
+            <span id="compteurNombreArbresPlantes" class="compteur">10592</span>
+            <span id="iconeArbresPlantes" class="iconeCompteur"></span>
+            <span>
+                <p>Plantés</p>
+                <p>mini texte</p>
+            </span>
+        </div>
+        <div id="nombreBailleurs" class="blocCompteur">
+            <span id="compteurNombreBailleurs" class="compteur">12</span>
+            <span id="iconeBailleurs" class="iconeCompteur"></span>
+            <span>
+                <p>bailleurs</p>
+                <p>mini texte</p>
+            </span>
+        </div>
+        <div id="nombreEntreprises" class="blocCompteur">
+            <span id="compteurNombreEntreprises" class="compteur">21</span>
+            <span id="iconeEntreprises" class="iconeCompteur"></span>
+            <span>
+                <p>entreprise</p>
+                <p>mini texte</p>
+            </span>
+        </div>
     </div>
 
-    <div id="imageCentrale">
-
-    </div>
+    <div id="imageCentrale"></div>
 
     <div id="commentCaMarche">
         <h3>Comment ça marche ?</h3>
@@ -86,5 +111,7 @@
         <div id="piedDePageCentre">LOGO MÉTROPOLE</div>
         <div id="piedDePageDroite">Un site de la Métropole de Lyon, YT, TWT FB</div>
     </div>
+
+    <script src="js/arboricoop.js"></script>
 </body>
 </html>
