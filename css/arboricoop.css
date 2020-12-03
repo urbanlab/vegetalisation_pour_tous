@@ -367,3 +367,7 @@ footer div{
 #blocAffichePlante{
     float: left;
 }
+#vousAimerezAussi{
+    display: none;
+    clear: both;
+}

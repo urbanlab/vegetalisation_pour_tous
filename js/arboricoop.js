@@ -68,9 +68,9 @@ function basculerCouleursChoixQuoiPlanter(choixTypePlante='arbustes'){
 /**
  * Cette fonction va simplement créer des blocs de contenu qui se répètent.
  */
-function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16){
+function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16, idBlocAremplir = 'listePlantes'){
     let i=0;
-    const contenant = document.getElementById('listePlantes');
+    const contenant = document.getElementById(idBlocAremplir);
     while (i<nombreDeBlocACreer){
         let nouveauBlocPlante = document.createElement("img");
         nouveauBlocPlante.classList.add('blocPlanteAChoisir');
@@ -91,6 +91,7 @@ function afficherDetailsPlante(blocOriginel={}){
     document.getElementById('sousBlocListePlantes').style.display='none';
     // 2° ON AFFICHE LE BLOC DESCRIPTIF.
     document.getElementById('presentationPlante').style.display='block';
+    document.getElementById('vousAimerezAussi').style.display='block';
     // 3° ON RÉCUPÈRE LES INFORMATIONS DE LA PLANTE EN QUESTION.
     for(let plante in arbustes){
         const urlImageCliquee = blocOriginel.src;
@@ -113,6 +114,7 @@ function afficherDetailsPlante(blocOriginel={}){
             document.getElementById('dimensionPlante').innerText=arbustes[plante].dimension;
             // - la forme de la plante
             document.getElementById('formePlante').innerText=arbustes[plante].forme;
+            peuplerContenuQuoiPlanter('4', 'plantesVousAimerezAussi');
             return;
         }
     }
