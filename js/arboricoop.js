@@ -1,3 +1,39 @@
+const arbres = {};
+const arbustes = {
+    "BUXUS sempervirens 'rotondifolia'":{
+        "origine":"",
+        "feuillage":"persistant",
+        "dimension":"",
+        "forme":"touffe",
+        "descriptif":"",
+        "emplacementImage":"2.png"
+    },
+    "BERBERIS agregata":{
+        "origine":"",
+        "feuillage":"semi-persistant",
+        "dimension": "H. 1,50m",
+        "forme":"touffe",
+        "descriptif":"Très rustique, fleurs jaunes, fruits rose rouge très nombreux et très décoratifs, feuillage fin rougissant à l'automne. Excellent pour haie dense et massif arbustif. Densité : 1/m².",
+        "emplacementImage":"3.png"
+    },
+    "MAHONIA japonica 'Beali'":{
+        "origine":"Chine",
+        "feuillage":"persistant",
+        "dimension": "H. 1.50m/2m",
+        "forme":"touffe",
+        "descriptif":"Port dressé. Très rustique, tous types de sols, ce mahonia a l'avantage de mieux vieillir qu'aquifolium. Très apprécié pour son feuillage vert pouvant être veiné de jaune et de rouge, selon les terrains et l'exposition. Fleurs jaune soufre en longues grappes étalées sur le feuillage au sommet des rameaux. Très employé en massif, jardinière, rocaille, banquette.",
+        "emplacementImage":"2.png"
+    },
+    "BERBERIS thunbergii vert":{
+        "origine":"",
+        "feuillage":"caduc",
+        "dimension": "",
+        "forme":"",
+        "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+        "emplacementImage":"1.png"
+    }
+};
+
 /**
  * Au chargement de la page, on souhaite faire croître le compteur d'arbres plantés toutes les quelques secondes
  * d'un nombre aléatoire d'arbres.
@@ -32,44 +68,9 @@ function basculerCouleursChoixQuoiPlanter(choixTypePlante='arbustes'){
 /**
  * Cette fonction va simplement créer des blocs de contenu qui se répètent.
  */
-function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16){
-    const arbres = {};
-    const arbustes = {
-        "BUXUS sempervirens 'rotondifolia'":{
-            "origine":"",
-            "feuillage":"persistant",
-            "dimension":"",
-            "forme":"touffe",
-            "descriptif":"",
-            "emplacementImage":"2.png"
-        },
-        "BERBERIS agregata":{
-            "origine":"",
-            "feuillage":"semi-persistant",
-            "dimension": "H. 1,50m",
-            "forme":"touffe",
-            "descriptif":"Très rustique, fleurs jaunes, fruits rose rouge très nombreux et très décoratifs, feuillage fin rougissant à l'automne. Excellent pour haie dense et massif arbustif. Densité : 1/m².",
-            "emplacementImage":"3.png"
-        },
-        "MAHONIA japonica 'Beali'":{
-            "origine":"Chine",
-            "feuillage":"persistant",
-            "dimension": "H. 1.50m/2m",
-            "forme":"touffe",
-            "descriptif":"Port dressé. Très rustique, tous types de sols, ce mahonia a l'avantage de mieux vieillir qu'aquifolium. Très apprécié pour son feuillage vert pouvant être veiné de jaune et de rouge, selon les terrains et l'exposition. Fleurs jaune soufre en longues grappes étalées sur le feuillage au sommet des rameaux. Très employé en massif, jardinière, rocaille, banquette.",
-            "emplacementImage":"2.png"
-        },
-        "BERBERIS thunbergii vert":{
-            "origine":"",
-            "feuillage":"caduc",
-            "dimension": "",
-            "forme":"",
-            "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
-            "emplacementImage":"1.png"
-        }
-    };
+function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16, idBlocAremplir = 'listePlantes'){
     let i=0;
-    const contenant = document.getElementById('listePlantes');
+    const contenant = document.getElementById(idBlocAremplir);
     while (i<nombreDeBlocACreer){
         let nouveauBlocPlante = document.createElement("img");
         nouveauBlocPlante.classList.add('blocPlanteAChoisir');
@@ -81,9 +82,50 @@ function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16){
     }
 }
 
-
+/**
+ * Affiche les détails de la plante dont la photo aura été cliquée.
+ * @param blocOriginel L'élément HTML' qui a été cliqué.
+ */
 function afficherDetailsPlante(blocOriginel={}){
-    console.log(blocOriginel);
+    // 1° MASQUER LA LISTE DES PLANTES.
+    document.getElementById('sousBlocListePlantes').style.display='none';
+    // 2° ON AFFICHE LE BLOC DESCRIPTIF.
+    document.getElementById('presentationPlante').style.display='block';
+    document.getElementById('vousAimerezAussi').style.display='block';
+    // 3° ON RÉCUPÈRE LES INFORMATIONS DE LA PLANTE EN QUESTION.
+    for(let plante in arbustes){
+        const urlImageCliquee = blocOriginel.src;
+        const nomImageCliquee = urlImageCliquee.split("/").pop();
+        if (nomImageCliquee===arbustes[plante].emplacementImage){
+    // 4° Et on injecte les données de cette plante dans la page.
+            // - l'image de la plante
+            let affichePlante = document.createElement("img");
+            affichePlante.src = 'img/arbre/' + nomImageCliquee;
+            document.getElementById('blocAffichePlante').appendChild(affichePlante);
+            // - le nom de la plante
+            document.getElementById('nomPlante').innerText=plante;
+            // - le type de la plante
+            document.getElementById('typePlante').innerText='arbuste';
+            // - l'origine de la plante
+            document.getElementById('originePlante').innerText=arbustes[plante].origine;
+            // - le feuillage de la plante
+            document.getElementById('feuillagePlante').innerText=arbustes[plante].feuillage;
+            // - la dimension de la plante
+            document.getElementById('dimensionPlante').innerText=arbustes[plante].dimension;
+            // - la forme de la plante
+            document.getElementById('formePlante').innerText=arbustes[plante].forme;
+            peuplerContenuQuoiPlanter('4', 'plantesVousAimerezAussi');
+            return;
+        }
+    }
+}
+
+function retourAccueilQuoiPlanter(){
+    // 1° AFFICHER LA LISTE DES PLANTES.
+    document.getElementById('sousBlocListePlantes').style.display='block';
+    // 2° MASQUER LE BLOC DESCRIPTIF.
+    document.getElementById('presentationPlante').style.display='none';
+    document.getElementById('vousAimerezAussi').style.display='none';
 }
 
 /*
@@ -93,8 +135,10 @@ function afficherDetailsPlante(blocOriginel={}){
 function genererCarte(){
     let mymap = L.map('carteInteractive').setView([45.75, 4.85], 12);
 
+
     L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-        maxZoom: 18,
+        maxZoom: 12,
+        minZoom: 12,
         attribution: '<a href="https://www.openstreetmap.org/">OpenStreetMap</a> | ' +
             '<a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'

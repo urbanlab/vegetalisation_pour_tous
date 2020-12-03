@@ -3,6 +3,7 @@
     --color-vert: #A4C08E;
     --color-fond: #F4F4F4;
     --color-grey: #A8A29D;
+    --color-black: #1B1C1B;
 }
 
 body{
@@ -22,7 +23,8 @@ h3{
     color: var(--color-vert);
     font-size: 50px;
     font-family: 'Alegrya';
-    color: var(--color-grey-fonce);
+    color: var(--color-black);
+    font-style: italic;
 }
 p, li{
     font-size: 14px;
@@ -41,11 +43,16 @@ main{
     margin-bottom:0;
 }
 
-
 /*                                  PAGE ACCUEIL                                     */
 /* EN-TÊTE */
 #blocGaucheEnTete{
     float: left;
+    background-image: url(../img/dessin/planseve.png);
+    background-repeat: no-repeat;
+        background-size: contain;
+        margin: 5px;
+    width: 100px;
+    height: 50px;
 }
 #blocDroitEnTete p{
     float: right;
@@ -88,9 +95,13 @@ main{
     background-image: url("../img/dessin/arbre.png");
 }
 #iconeBailleurs{
+    margin: 9px 5px;
     background-image: url("../img/dessin/bailleur.png");
 }
 #iconeEntreprises{
+    height: 60px;
+    width: 74px;
+    margin: 6px 5px;
     background-image: url("../img/dessin/entreprise.png");
 }
 #imageCentrale{
@@ -114,6 +125,7 @@ main{
 .iconeCommentCaMarche{
     height: 150px;
     width: 150px;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     display: inline-block;
@@ -168,8 +180,7 @@ main{
     background-image: url("../img/dessin/lien.png");
 }
 #imageLabelSeve{
-    /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/niveau1.png");
 }
 
 /* PROJETS RÉALISÉS */
@@ -363,4 +374,11 @@ footer div{
 }
 #presentationPlante{
     display: none;
+}
+#blocAffichePlante{
+    float: left;
+}
+#vousAimerezAussi{
+    display: none;
+    clear: both;
 }
