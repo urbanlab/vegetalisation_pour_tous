@@ -32,7 +32,11 @@
                 <a href="monespace.html">
                     <p id="connecter">Se connecter</p>
                 </a>
-                <p>Nous contacter</p>
+                <p>
+                    <a href="#nousContacter">
+                        Nous contacter
+                    </a>
+                </p>
                 <p>
                     <a href="quoiplanter.html">
                         Quoi planter
@@ -278,6 +282,32 @@
                 <div id="piedDePageCentre">LOGO MÉTROPOLE</div>
                 <div id="piedDePageDroite">Un site de la Métropole de Lyon, YT, TWT FB</div>
             </footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+            
+
+            <script type="text/javascript">
+                $("a[href*='#']").click(function() {
+                    if (
+                        location.hostname == this.hostname
+                        && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
+                        ) {
+                            var anchor = $(this.hash);
+                            anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+                            if ( anchor.length ) {
+                                $("html, body").animate( { scrollTop: anchor.offset().top }, 800);
+                            }
+                        }
+                    });
+
+                    // <!-- let mars = document.getElementById("imgMars"); -->
+                    var offset =0;
+
+                    window.addEventListener('scroll', function(){
+
+                        var hauteur = document.body.clientHeight;
+                        var value = window.scrollY;
+                    })
+            </script>
 
             <script src="js/arboricoop.js"></script>
         </body>
