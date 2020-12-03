@@ -69,19 +69,22 @@ function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16){
         }
     };
     let i=0;
-    console.log(arbustes);
-    console.log();
     const contenant = document.getElementById('listePlantes');
     while (i<nombreDeBlocACreer){
         let nouveauBlocPlante = document.createElement("img");
         nouveauBlocPlante.classList.add('blocPlanteAChoisir');
         const numeroArbuste = i%Object.keys(arbustes).length;
         nouveauBlocPlante.src='img/arbre/' + arbustes[Object.keys(arbustes)[numeroArbuste]].emplacementImage;
+        nouveauBlocPlante.onclick = function() { afficherDetailsPlante(this); };
         contenant.appendChild(nouveauBlocPlante);
         i++;
     }
 }
 
+
+function afficherDetailsPlante(blocOriginel={}){
+    console.log(blocOriginel);
+}
 
 /*
                             GESTION DE LA CARTE
