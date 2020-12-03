@@ -27,12 +27,18 @@ h3{
 p, li{
     font-size: 14px;
 }
+a{
+    text-decoration: none;
+}
 
 main{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+#quoiPlanterContenu h3{
+    margin-bottom:0;
+}
 
 
 /*                                  PAGE ACCUEIL                                     */
@@ -103,7 +109,7 @@ main{
     height: 150px;
     width: 150px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     display: inline-block;
 }
 #imageMiseEnRelation{
@@ -177,7 +183,9 @@ main{
     width: 45%;
     float: left;
 }
-#boutonEnSavoirPlus{
+#boutonEnSavoirPlus,
+#quoiPlanterBoutonParcourir
+{
     background-color: var(--color-grey);
     display: inline;
     padding: 8px 25px;
@@ -195,29 +203,35 @@ main{
 }
 #imageNiveau1{
     background-image: url("../img/dessin/niveau1.png");
-    height: 50px;
-    width: 75px;
 }
 #imageNiveau2{
     background-image: url("../img/dessin/niveau2.png");
-    height: 50px;
-    width: 75px;
 }
 #imageNiveau3{
     background-image: url("../img/dessin/niveau3.png");
+}
+
+.imageNiveau{
+    background-size: contain;
     height: 50px;
-    width: 75px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #contenuDescription{
     float: left;
 }
 #carteInteractive{
-    float: left;
+    float: right;
     width: 60vw;;
     height: 500px;
 }
 
-<<<<<<< Updated upstream
+td p{
+    margin-bottom: 2px;
+}
+
+/* <<<<<<< Updated upstream */
 #compteurNombreArbresPlantes,
 #compteurNombreBailleurs,
 #compteurNombreEntreprises{
@@ -233,6 +247,9 @@ main{
     margin-bottom: 0;
     margin-top: 10px;
 }
+
+
+
 #nombreArbresPlantes p:nth-child(2),
 #nombreBailleurs p:nth-child(2),
 #nombreEntreprises p:nth-child(2){
@@ -241,18 +258,17 @@ main{
 }
 
 
-
-=======
 #compteurNombreArbresPlantes{
 
 }
->>>>>>> Stashed changes
+/* >>>>>>> Stashed changes */
 
 /* QUOI PLANTER */
 #quoiPlanter{
+    color: var(--color-fond);
     clear: both;
     width: 100%;
-    height: 650px;
+    height: 450px;
     background-position: center;
     background-size: cover;
     background-image: url("../img/image/planter.png");
@@ -260,23 +276,23 @@ main{
 #quoiPlanterContenu{
     width: 20%;
     margin-left: 75%;
-    padding-top: 400px;
+    padding-top: 50px;
 }
 #quoiPlanterBoutonParcourir{
     color: white;
-    background-color: black;
 }
 /* NOUS CONTACTER */
 #blocFormulaireContact{
     float: left;
 }
 #blocPhotoFormulaireContact{
-    float: left;
+    float: right;
     width: 50%;
     height: 500px;
     background-position: center;
     background-size: cover;
-    background-image: url("../img/image/image2.png");
+    border-radius: 4px;
+    background-image: url("../img/image/groupe.png");
 }
 /* FOOTER */
 footer{
