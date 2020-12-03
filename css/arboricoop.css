@@ -364,3 +364,6 @@ footer div{
 #presentationPlante{
     display: none;
 }
+#blocAffichePlante{
+    float: left;
+}
