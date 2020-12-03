@@ -13,7 +13,7 @@ function activerCompteur(){
                             GESTION DE LA CARTE
  */
 // On créé une carte que l'on centre et zoome sur la région lyonnaise.
-let mymap = L.map('carteInteractive').setView([45.75, 4.85], 9);
+let mymap = L.map('carteInteractive').setView([45.75, 4.85], 12);
 
 L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
     maxZoom: 18,
