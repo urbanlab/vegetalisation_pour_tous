@@ -97,12 +97,22 @@ function afficherDetailsPlante(blocOriginel={}){
         const nomImageCliquee = urlImageCliquee.split("/").pop();
         if (nomImageCliquee===arbustes[plante].emplacementImage){
     // 4° Et on injecte les données de cette plante dans la page.
-            // l'image de la plante
+            // - l'image de la plante
             let affichePlante = document.createElement("img");
             affichePlante.src = 'img/arbre/' + nomImageCliquee;
             document.getElementById('blocAffichePlante').appendChild(affichePlante);
             // - le nom de la plante
             document.getElementById('nomPlante').innerText=plante;
+            // - le type de la plante
+            document.getElementById('typePlante').innerText='arbuste';
+            // - l'origine de la plante
+            document.getElementById('originePlante').innerText=arbustes[plante].origine;
+            // - le feuillage de la plante
+            document.getElementById('feuillagePlante').innerText=arbustes[plante].feuillage;
+            // - la dimension de la plante
+            document.getElementById('dimensionPlante').innerText=arbustes[plante].dimension;
+            // - la forme de la plante
+            document.getElementById('formePlante').innerText=arbustes[plante].forme;
             return;
         }
     }
