@@ -28,6 +28,7 @@ p, li{
     font-size: 14px;
 }
 a{
+    color: inherit;
     text-decoration: none;
 }
 
@@ -49,6 +50,11 @@ main{
 #blocDroitEnTete p{
     float: right;
 }
+
+#connecter{
+
+}
+
 #imageEnTete{
     clear: both;
     width: 100%;
@@ -183,8 +189,37 @@ main{
     width: 45%;
     float: left;
 }
+
+#enTete nav{
+    margin: 0 30px;
+}
+
+#enTete nav p:nth-child(2),
+#enTete nav p:nth-child(3){
+    margin:  22px 15px 0 15px;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+
+#enTete nav p:nth-child(2):hover,
+#enTete nav p:nth-child(3):hover{
+    color: var(--color-vert);
+}
+
+#enTete nav p{
+    transition: all ease .3s;
+
+}
+
+#enTete nav p:nth-child(1):hover{
+    transition: all ease .3s;
+
+    background-color: var(--color-vert)
+}
+
 #boutonEnSavoirPlus,
-#quoiPlanterBoutonParcourir
+#quoiPlanterBoutonParcourir,
+#connecter
 {
     background-color: var(--color-grey);
     display: inline;
@@ -274,8 +309,8 @@ td p{
     background-image: url("../img/image/planter.png");
 }
 #quoiPlanterContenu{
-    width: 20%;
-    margin-left: 75%;
+    width: 27%;
+    margin-left: 70%;
     padding-top: 50px;
 }
 #quoiPlanterBoutonParcourir{
@@ -319,4 +354,13 @@ footer div{
     padding-left: 9%;
     text-align: center;
     border: green solid 2px;
+}
+.blocPlanteAChoisir{
+    width: 15%;
+    margin-left: 4%;
+    margin-top: 35px;
+    background-color: purple;
+}
+#presentationPlante{
+    display: none;
 }
