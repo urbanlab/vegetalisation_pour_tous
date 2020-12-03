@@ -217,7 +217,6 @@ main{
     height: 500px;
 }
 
-<<<<<<< Updated upstream
 #compteurNombreArbresPlantes,
 #compteurNombreBailleurs,
 #compteurNombreEntreprises{
@@ -240,13 +239,9 @@ main{
     font-size: 8px;
 }
 
-
-
-=======
 #compteurNombreArbresPlantes{
 
 }
->>>>>>> Stashed changes
 
 /* QUOI PLANTER */
 #quoiPlanter{
