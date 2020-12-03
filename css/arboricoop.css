@@ -81,3 +81,90 @@
 #avantages{
     clear: both;
 }
+.blocAvantages{
+    float: left;
+    width: 14%;
+    margin-left: 2%;
+}
+.imageAvantages{
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+#imageCO2{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+#imageDiminutionChaleur{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+#imageFoncier{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+#imageCadreDeVie{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+#imageLienSocial{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+#imageLabelSeve{
+    /* Image manquante */
+    background-image: url("../img/dessin/label.png");
+}
+
+/* PROJETS RÉALISÉS */
+#projetsRealises{
+    clear: both;
+}
+#imageProjetsRealises{
+    width: 50%;
+    height: 400px;
+    background-image: url("../img/image/image1.png");
+    float: left;
+}
+#blocDroitProjets{
+    width: 45%;
+    float: left;
+}
+#boutonEnSavoirPlus{
+    background-color: grey;
+}
+.boutonCarroussel{
+    float: left;
+}
+/* CARTE DE LYON */
+#carteDeLyon{
+    clear: both;
+}
+#imageNiveau1{
+    background-image: url("../img/dessin/niveau1.png");
+    height: 50px;
+    width: 75px;
+}
+#imageNiveau2{
+     background-image: url("../img/dessin/niveau2.png");
+     height: 50px;
+     width: 75px;
+ }
+#imageNiveau3{
+      background-image: url("../img/dessin/niveau3.png");
+      height: 50px;
+      width: 75px;
+  }
+#contenuDescription{
+    float: left;
+}
+#carteInteractive{
+    float: left;
+}
+
+/* QUOI PLANTER */
+#quoiPlanter{
+    clear: both;
+}
