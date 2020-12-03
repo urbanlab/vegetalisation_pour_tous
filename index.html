@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>ArboriCoop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,900;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-            crossorigin=""/
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/
     >
     <link rel="stylesheet" href="css/arboricoop.css">
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
-            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-            crossorigin="">
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
     </script>
 </head>
 <body onload="setInterval(activerCompteur, 1000 * 2);">
@@ -32,191 +36,193 @@
         </nav>
         <div id="imageEnTete"></div>
     </div>
+    <main>
 
-    <div id="blocNombres">
-        <div id="nombreArbresPlantes" class="blocCompteur">
-            <span id="compteurNombreArbresPlantes" class="compteur">10592</span>
-            <span id="iconeArbresPlantes" class="iconeCompteur"></span>
-            <span>
-                <p>Plantés</p>
-                <p>mini texte</p>
-            </span>
+        <div id="blocNombres">
+            <div id="nombreArbresPlantes" class="blocCompteur">
+                <span id="compteurNombreArbresPlantes" class="compteur">10592</span>
+                <span id="iconeArbresPlantes" class="iconeCompteur"></span>
+                <span>
+                    <p>Plantés</p>
+                    <p>mini texte</p>
+                </span>
+            </div>
+            <div id="nombreBailleurs" class="blocCompteur">
+                <span id="compteurNombreBailleurs" class="compteur">12</span>
+                <span id="iconeBailleurs" class="iconeCompteur"></span>
+                <span>
+                    <p>bailleurs</p>
+                    <p>mini texte</p>
+                </span>
+            </div>
+            <div id="nombreEntreprises" class="blocCompteur">
+                <span id="compteurNombreEntreprises" class="compteur">21</span>
+                <span id="iconeEntreprises" class="iconeCompteur"></span>
+                <span>
+                    <p>entreprise</p>
+                    <p>mini texte</p>
+                </span>
+            </div>
         </div>
-        <div id="nombreBailleurs" class="blocCompteur">
-            <span id="compteurNombreBailleurs" class="compteur">12</span>
-            <span id="iconeBailleurs" class="iconeCompteur"></span>
-            <span>
-                <p>bailleurs</p>
-                <p>mini texte</p>
-            </span>
-        </div>
-        <div id="nombreEntreprises" class="blocCompteur">
-            <span id="compteurNombreEntreprises" class="compteur">21</span>
-            <span id="iconeEntreprises" class="iconeCompteur"></span>
-            <span>
-                <p>entreprise</p>
-                <p>mini texte</p>
-            </span>
-        </div>
-    </div>
 
-    <div id="imageCentrale"></div>
+        <div id="imageCentrale"></div>
 
-    <div id="commentCaMarche">
-        <h3>Comment ça marche ?</h3>
-        <div id="defileCommentCaMarche">
-            <div id="miseEnRelation" class="blocCommentCaMarche">
-                <div id="imageMiseEnRelation" class="iconeCommentCaMarche"></div>
-                <div id="texteMiseEnRelation" class="texteCommentCaMarche">
-                    <h4>Mise en relation</h4>
-                    <p>
-                        Vous avez un projet de végétalisation, la métropole de Lyon vous accompagne alors dans votre démarche. Elle vous met en relation avec un pépiniériste et des experts, afin de construire le projet qui vous ressemble.
-                    </p>
+        <div id="commentCaMarche">
+            <h3>Comment ça marche ?</h3>
+            <div id="defileCommentCaMarche">
+                <div id="miseEnRelation" class="blocCommentCaMarche">
+                    <div id="imageMiseEnRelation" class="iconeCommentCaMarche"></div>
+                    <div id="texteMiseEnRelation" class="texteCommentCaMarche">
+                        <h4>Mise en relation</h4>
+                        <p>
+                            Vous avez un projet de végétalisation, la métropole de Lyon vous accompagne alors dans votre démarche. Elle vous met en relation avec un pépiniériste et des experts, afin de construire le projet qui vous ressemble.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div id="plantation" class="blocCommentCaMarche">
-                <div id="imagePlantation" class="iconeCommentCaMarche"></div>
-                <div id="textePlantation" class="texteCommentCaMarche">
-                    <h4>Plantation</h4>
-                    <p>Une fois les arbres, le lieu, et les formalités validées, la plantation s’effectue avec les acteurs de votre entreprise/copropriété, volontaires. Accompagné d’intervenants extérieurs, cette journée est rythmée par des ateliers de formations et de sensibilisations. </p>
+                <div id="plantation" class="blocCommentCaMarche">
+                    <div id="imagePlantation" class="iconeCommentCaMarche"></div>
+                    <div id="textePlantation" class="texteCommentCaMarche">
+                        <h4>Plantation</h4>
+                        <p>Une fois les arbres, le lieu, et les formalités validées, la plantation s’effectue avec les acteurs de votre entreprise/copropriété, volontaires. Accompagné d’intervenants extérieurs, cette journée est rythmée par des ateliers de formations et de sensibilisations. </p>
+                    </div>
                 </div>
-            </div>
-            <div id="suivi" class="blocCommentCaMarche">
-                <div id="imageSuivi" class="iconeCommentCaMarche"></div>
-                <div id="texteSuivi" class="texteCommentCaMarche">
-                    <h4>Suivi</h4>
-                    <p>
-                        Grâce à l’application de suivi SEVE, vous pouvez consulter la carte d’identité de l’arbre, le carnet de santé ainsi que le patrimoine de l’arbre.
-                    </p>
+                <div id="suivi" class="blocCommentCaMarche">
+                    <div id="imageSuivi" class="iconeCommentCaMarche"></div>
+                    <div id="texteSuivi" class="texteCommentCaMarche">
+                        <h4>Suivi</h4>
+                        <p>
+                            Grâce à l’application de suivi SEVE, vous pouvez consulter la carte d’identité de l’arbre, le carnet de santé ainsi que le patrimoine de l’arbre.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div id="labelisation" class="blocCommentCaMarche">
-                <div id="imageLabelisation" class="iconeCommentCaMarche"></div>
-                <div id="texteLabelisation" class="texteCommentCaMarche">
-                    <h4>Labelisation</h4>
-                    <p>
-                        Votre engagement de végétalisation sera récompensé par un LabelSève. En effet, le bon entretien de vos arbres vous sera bénéfique sur le plan social, économique et écologique.
-                    </p>
+                <div id="labelisation" class="blocCommentCaMarche">
+                    <div id="imageLabelisation" class="iconeCommentCaMarche"></div>
+                    <div id="texteLabelisation" class="texteCommentCaMarche">
+                        <h4>Labelisation</h4>
+                        <p>
+                            Votre engagement de végétalisation sera récompensé par un LabelSève. En effet, le bon entretien de vos arbres vous sera bénéfique sur le plan social, économique et écologique.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="avantages">
-        <h3>Les avantages</h3>
-        <div id="defileLesAvantages">
-            <div id="co2" class="blocAvantages">
-                <div class="imageAvantages" id="imageCO2"></div>
-                <div class="texteAvantages">
-                    <p>Diminution de son empreinte carbone</p>
+        <div id="avantages">
+            <h3>Les avantages</h3>
+            <div id="defileLesAvantages">
+                <div id="co2" class="blocAvantages">
+                    <div class="imageAvantages" id="imageCO2"></div>
+                    <div class="texteAvantages">
+                        <p>Diminution de son empreinte carbone</p>
+                    </div>
                 </div>
-            </div>
-            <div id="diminutionChaleur" class="blocAvantages">
-                <div class="imageAvantages" id="imageDiminutionChaleur"></div>
-                <div class="texteAvantages">
-                    <p>Diminution des ilots de chaleurs</p>
+                <div id="diminutionChaleur" class="blocAvantages">
+                    <div class="imageAvantages" id="imageDiminutionChaleur"></div>
+                    <div class="texteAvantages">
+                        <p>Diminution des ilots de chaleurs</p>
+                    </div>
                 </div>
-            </div>
-            <div id="foncier" class="blocAvantages">
-                <div class="imageAvantages" id="imageFoncier"></div>
-                <div class="texteAvantages">
-                    <p>Augmentation de la valeur du foncier</p>
+                <div id="foncier" class="blocAvantages">
+                    <div class="imageAvantages" id="imageFoncier"></div>
+                    <div class="texteAvantages">
+                        <p>Augmentation de la valeur du foncier</p>
+                    </div>
                 </div>
-            </div>
-            <div id="ameliorationCadreDeVie" class="blocAvantages">
-                <div class="imageAvantages" id="imageCadreDeVie"></div>
-                <div class="texteAvantages">
-                    <p>Amélioration du cadre de vie</p>
+                <div id="ameliorationCadreDeVie" class="blocAvantages">
+                    <div class="imageAvantages" id="imageCadreDeVie"></div>
+                    <div class="texteAvantages">
+                        <p>Amélioration du cadre de vie</p>
+                    </div>
                 </div>
-            </div>
-            <div id="lienSocial" class="blocAvantages">
-                <div class="imageAvantages" id="imageLienSocial"></div>
-                <div class="texteAvantages">
-                    <p>Créer du lien social</p>
+                <div id="lienSocial" class="blocAvantages">
+                    <div class="imageAvantages" id="imageLienSocial"></div>
+                    <div class="texteAvantages">
+                        <p>Créer du lien social</p>
+                    </div>
                 </div>
-            </div>
-            <div id="labelSeve" class="blocAvantages">
-                <div class="imageAvantages" id="imageLabelSeve"></div>
-                <div class="texteAvantages">
-                    <p>Obtention du diplôme LabelSève</p>
+                <div id="labelSeve" class="blocAvantages">
+                    <div class="imageAvantages" id="imageLabelSeve"></div>
+                    <div class="texteAvantages">
+                        <p>Obtention du diplôme LabelSève</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="projetsRealises">
-        <h3>Projets réalisés</h3>
-        <div>
-            <div id="imageProjetsRealises"></div>
-            <div id="blocDroitProjets">
-                <div id="descriptionProjetRealise">
-                    <h3>Sanofy</h3>
-                    <ul>
-                        <li>Plantation de 30 arbres ainsi que de 20 arbustes.</li>
-                        <li>Ateliers avec les enfants du personnels, afin de les sensibiliser sur notre impact, sur la biodiversité.</li>
-                        <li>Parainnage de l’entreprise Veolia</li>
-                    </ul>
-                    <p id="boutonEnSavoirPlus">EN SAVOIR PLUS</p>
-                </div>
-                <div id="boutonsCarrousel">
-                    <div class="boutonCarroussel">«</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">o</div>
-                    <div class="boutonCarroussel">»</div>
+        <div id="projetsRealises">
+            <h3>Projets réalisés</h3>
+            <div>
+                <div id="imageProjetsRealises"></div>
+                <div id="blocDroitProjets">
+                    <div id="descriptionProjetRealise">
+                        <h3>Sanofy</h3>
+                        <ul>
+                            <li>Plantation de 30 arbres ainsi que de 20 arbustes.</li>
+                            <li>Ateliers avec les enfants du personnels, afin de les sensibiliser sur notre impact, sur la biodiversité.</li>
+                            <li>Parainnage de l’entreprise Veolia</li>
+                        </ul>
+                        <p id="boutonEnSavoirPlus">EN SAVOIR PLUS</p>
+                    </div>
+                    <div id="boutonsCarrousel">
+                        <div class="boutonCarroussel">«</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">o</div>
+                        <div class="boutonCarroussel">»</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="carteDeLyon">
-        <h3>Ils nous ont fait confiance</h3>
-        <div>
-            <table id="contenuDescription">
-                <tr>
-                    <td id="imageNiveau1"></td>
-                    <td>
-                        <p>Nv1 : Jeune Pousse</p>
-                        <p>10 arbres plantés</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imageNiveau2"></td>
-                    <td>
-                        <p>Nv2 : Grand Chêne</p>
-                        <p>100 arbres plantés</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="imageNiveau3"></td>
-                    <td>
-                        <p>Nv3 : Vieille Branche</p>
-                        <p>300 arbres plantés</p>
-                    </td>
-                </tr>
-            </table>
-            <div id="carteInteractive"></div>
+        <div id="carteDeLyon">
+            <h3>Ils nous ont fait confiance</h3>
+            <div>
+                <table id="contenuDescription">
+                    <tr>
+                        <td id="imageNiveau1"></td>
+                        <td>
+                            <p>Nv1 : Jeune Pousse</p>
+                            <p>10 arbres plantés</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imageNiveau2"></td>
+                        <td>
+                            <p>Nv2 : Grand Chêne</p>
+                            <p>100 arbres plantés</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="imageNiveau3"></td>
+                        <td>
+                            <p>Nv3 : Vieille Branche</p>
+                            <p>300 arbres plantés</p>
+                        </td>
+                    </tr>
+                </table>
+                <div id="carteInteractive"></div>
+            </div>
         </div>
-    </div>
 
-    <div id="quoiPlanter">
-        <div id="quoiPlanterContenu">
-            <h3>Quoi planter ?</h3>
-            <p id="texteQuoiPlanter"></p>
-            <p id="quoiPlanterBoutonParcourir">Parcourir</p>
+        <div id="quoiPlanter">
+            <div id="quoiPlanterContenu">
+                <h3>Quoi planter ?</h3>
+                <p id="texteQuoiPlanter"></p>
+                <p id="quoiPlanterBoutonParcourir">Parcourir</p>
+            </div>
         </div>
-    </div>
 
-    <div id="nousContacter">
-        <h3>Nous contacter</h3>
-        <div>
-            <div id="blocFormulaireContact"></div>
-            <div id="blocPhotoFormulaireContact"></div>
+        <div id="nousContacter">
+            <h3>Nous contacter</h3>
+            <div>
+                <div id="blocFormulaireContact"></div>
+                <div id="blocPhotoFormulaireContact"></div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <div id="piedDePage">
         <div id="piedDePageGauche">Mentions légales Contact Se connecter</div>

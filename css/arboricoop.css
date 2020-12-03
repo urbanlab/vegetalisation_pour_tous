@@ -1,3 +1,40 @@
+/* COULEURS */
+:root {
+    --color-vert: #A4C08E;
+    --color-fond: #F4F4F4;
+    --color-grey: #A8A29D;
+}
+
+body{
+    background-color: var(--color-fond);
+    color:#6A6A6A;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+h4{
+    color: var(--color-vert);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+h3{
+    color: var(--color-vert);
+    font-size: 50px;
+    font-family: 'Alegrya';
+    color: var(--color-grey-fonce);
+}
+p, li{
+    font-size: 14px;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
 /*                                  PAGE ACCUEIL                                     */
 /* EN-TÊTE */
 #blocGaucheEnTete{
@@ -9,17 +46,18 @@
 #imageEnTete{
     clear: both;
     width: 100%;
-    height: 300px;
-    background-image: url("../img/image/banniere.png");
+    height: 350px;
+    background-image: url("../img/image/entete.png");
     background-position: center;
     background-size: cover;
+    margin-bottom: 15px;
 }
 
 /* BLOC COMPTEURS */
 #blocNombres div{
     float: left;
-    width: 22%;
-    margin-left: 10%;
+    width: 26%;
+    margin-left: 6%;
 }
 .compteur{
     font-size: xxx-large;
@@ -46,16 +84,20 @@
 #imageCentrale{
     clear: both;
     width: 100%;
-    height: 800px;
+    height: 500px;
     background-image: url("../img/image/miseEnSituation.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 /* COMMENT ÇA MARCHE */
 .blocCommentCaMarche{
     float: left;
     width: 20%;
     margin-left: 5%;
+}
+.blocCommentCaMarche:nth-child(1){
+    margin-left: 0px;
 }
 .iconeCommentCaMarche{
     height: 150px;
@@ -103,7 +145,7 @@
 }
 #imageFoncier{
     /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/foncier.png");
 }
 #imageCadreDeVie{
     /* Image manquante */
@@ -111,7 +153,7 @@
 }
 #imageLienSocial{
     /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/lien.png");
 }
 #imageLabelSeve{
     /* Image manquante */
@@ -125,15 +167,24 @@
 #imageProjetsRealises{
     width: 50%;
     height: 400px;
-    background-image: url("../img/image/image1.png");
+    background-size: cover;
+    border-radius: 4px;
+    background-image: url("../img/image/image.png");
     float: left;
+    margin-right: 50px;
 }
 #blocDroitProjets{
     width: 45%;
     float: left;
 }
 #boutonEnSavoirPlus{
-    background-color: grey;
+    background-color: var(--color-grey);
+    display: inline;
+    padding: 8px 25px;
+    border-radius:4px;
+    color: var(--color-fond);
+    font-weight: bold;
+
 }
 .boutonCarroussel{
     float: left;
@@ -148,23 +199,46 @@
     width: 75px;
 }
 #imageNiveau2{
-     background-image: url("../img/dessin/niveau2.png");
-     height: 50px;
-     width: 75px;
- }
+    background-image: url("../img/dessin/niveau2.png");
+    height: 50px;
+    width: 75px;
+}
 #imageNiveau3{
-      background-image: url("../img/dessin/niveau3.png");
-      height: 50px;
-      width: 75px;
-  }
+    background-image: url("../img/dessin/niveau3.png");
+    height: 50px;
+    width: 75px;
+}
 #contenuDescription{
     float: left;
 }
 #carteInteractive{
     float: left;
-    height: 500px;
-    width: 500px;
 }
+
+#compteurNombreArbresPlantes,
+#compteurNombreBailleurs,
+#compteurNombreEntreprises{
+    font-family: 'Alegreya', serif;
+    font-weight:900;
+    color:var(--color-vert)
+}
+#nombreArbresPlantes p:nth-child(1),
+#nombreBailleurs p:nth-child(1),
+#nombreEntreprises p:nth-child(1){
+    font-weight:900;
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+#nombreArbresPlantes p:nth-child(2),
+#nombreBailleurs p:nth-child(2),
+#nombreEntreprises p:nth-child(2){
+    margin-top: 0;
+    font-size: 8px;
+}
+
+
+
 
 /* QUOI PLANTER */
 #quoiPlanter{
