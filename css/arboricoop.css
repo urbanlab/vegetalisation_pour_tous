@@ -320,3 +320,12 @@ footer div{
     text-align: center;
     border: green solid 2px;
 }
+.blocPlanteAChoisir{
+    width: 15%;
+    margin-left: 4%;
+    margin-top: 35px;
+    background-color: purple;
+}
+#presentationPlante{
+    display: none;
+}
