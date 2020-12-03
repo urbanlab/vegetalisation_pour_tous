@@ -209,3 +209,15 @@ footer div{
 #piedDePageDroite{
     margin-left: 25%;
 }
+
+
+/*                              PAGE QUOI PLANTER                       */
+#cadreGeneral{
+    clear: both;
+}
+#categories div{
+    float: left;
+    width: 40%;
+    margin-left: 10%;
+    text-align: center;
+}
