@@ -216,8 +216,6 @@ main{
     width: 60vw;;
     height: 500px;
 }
-
-<<<<<<< Updated upstream
 #compteurNombreArbresPlantes,
 #compteurNombreBailleurs,
 #compteurNombreEntreprises{
@@ -240,13 +238,9 @@ main{
     font-size: 8px;
 }
 
-
-
-=======
 #compteurNombreArbresPlantes{
 
 }
->>>>>>> Stashed changes
 
 /* QUOI PLANTER */
 #quoiPlanter{
@@ -303,4 +297,10 @@ footer div{
     padding-left: 9%;
     text-align: center;
     border: green solid 2px;
+}
+.blocPlanteAChoisir{
+    width: 20%;
+    margin-left: 4%;
+    margin-top: 35px;
+    background-color: purple;
 }
