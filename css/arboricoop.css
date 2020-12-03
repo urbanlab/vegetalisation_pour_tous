@@ -19,6 +19,11 @@ h4{
     margin-bottom: 0;
 }
 
+/* nav{
+    position: fixed;
+    width: 100%;
+} */
+
 h3{
     color: var(--color-vert);
     font-size: 50px;
@@ -365,20 +370,4 @@ footer div{
     padding-left: 9%;
     text-align: center;
     border: green solid 2px;
-}
-.blocPlanteAChoisir{
-    width: 15%;
-    margin-left: 4%;
-    margin-top: 35px;
-    background-color: purple;
-}
-#presentationPlante{
-    display: none;
-}
-#blocAffichePlante{
-    float: left;
-}
-#vousAimerezAussi{
-    display: none;
-    clear: both;
 }
