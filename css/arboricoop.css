@@ -213,8 +213,11 @@ main{
 }
 #carteInteractive{
     float: left;
+    width: 60vw;;
+    height: 500px;
 }
 
+<<<<<<< Updated upstream
 #compteurNombreArbresPlantes,
 #compteurNombreBailleurs,
 #compteurNombreEntreprises{
@@ -239,6 +242,11 @@ main{
 
 
 
+=======
+#compteurNombreArbresPlantes{
+
+}
+>>>>>>> Stashed changes
 
 /* QUOI PLANTER */
 #quoiPlanter{
