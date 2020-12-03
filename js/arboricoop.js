@@ -8,10 +8,83 @@ function activerCompteur(){
     compteur.innerText = parseInt(compteur.innerText) + intervalle;
 }
 
-function peuplerContenuQuoiPlanter(){
-
+function montrerChoixQuoiPlanter(choixTypePlante='arbustes'){
+    basculerCouleursChoixQuoiPlanter(choixTypePlante);
+    peuplerContenuQuoiPlanter();
 }
 
+/**
+ * On modifie le style de l'onglet choisi en activé et celui de l'autre en désactivé.
+ */
+function basculerCouleursChoixQuoiPlanter(choixTypePlante='arbustes'){
+    let blocChoixActif = document.getElementById('choixArbres');
+    let blocChoixInactif = document.getElementById('choixArbustes');
+    if (choixTypePlante==='arbustes'){
+        blocChoixActif = document.getElementById('choixArbustes');
+        blocChoixInactif = document.getElementById('choixArbres');
+    }
+    blocChoixActif.style.backgroundColor='green';
+    blocChoixActif.style.color='white';
+    blocChoixInactif.style.backgroundColor='white';
+    blocChoixInactif.style.color='green';
+}
+
+/**
+ * Cette fonction va simplement créer des blocs de contenu qui se répètent.
+ */
+function peuplerContenuQuoiPlanter(nombreDeBlocACreer=16){
+    const arbres = {};
+    const arbustes = {
+        "BUXUS sempervirens 'rotondifolia'":{
+            "origine":"",
+            "feuillage":"persistant",
+            "dimension":"",
+            "forme":"touffe",
+            "descriptif":"",
+            "emplacementImage":"2.png"
+        },
+        "BERBERIS agregata":{
+            "origine":"",
+            "feuillage":"semi-persistant",
+            "dimension": "H. 1,50m",
+            "forme":"touffe",
+            "descriptif":"Très rustique, fleurs jaunes, fruits rose rouge très nombreux et très décoratifs, feuillage fin rougissant à l'automne. Excellent pour haie dense et massif arbustif. Densité : 1/m².",
+            "emplacementImage":"3.png"
+        },
+        "MAHONIA japonica 'Beali'":{
+            "origine":"Chine",
+            "feuillage":"persistant",
+            "dimension": "H. 1.50m/2m",
+            "forme":"touffe",
+            "descriptif":"Port dressé. Très rustique, tous types de sols, ce mahonia a l'avantage de mieux vieillir qu'aquifolium. Très apprécié pour son feuillage vert pouvant être veiné de jaune et de rouge, selon les terrains et l'exposition. Fleurs jaune soufre en longues grappes étalées sur le feuillage au sommet des rameaux. Très employé en massif, jardinière, rocaille, banquette.",
+            "emplacementImage":"2.png"
+        },
+        "BERBERIS thunbergii vert":{
+            "origine":"",
+            "feuillage":"caduc",
+            "dimension": "",
+            "forme":"",
+            "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+            "emplacementImage":"1.png"
+        }
+    };
+    let i=0;
+    const contenant = document.getElementById('listePlantes');
+    while (i<nombreDeBlocACreer){
+        let nouveauBlocPlante = document.createElement("img");
+        nouveauBlocPlante.classList.add('blocPlanteAChoisir');
+        const numeroArbuste = i%Object.keys(arbustes).length;
+        nouveauBlocPlante.src='img/arbre/' + arbustes[Object.keys(arbustes)[numeroArbuste]].emplacementImage;
+        nouveauBlocPlante.onclick = function() { afficherDetailsPlante(this); };
+        contenant.appendChild(nouveauBlocPlante);
+        i++;
+    }
+}
+
+
+function afficherDetailsPlante(blocOriginel={}){
+    console.log(blocOriginel);
+}
 
 /*
                             GESTION DE LA CARTE
@@ -43,7 +116,6 @@ function genererCarte(){
         L.marker([pointCourant.latitude, pointCourant.longitude]).bindPopup(forgerTextePopUp(pointCourant)).addTo(mymap);
     }
 }
-
 
 /**
    * La fonction génère le code HTML qui sera injecté dans le pop-up correspondant à un marqueur
