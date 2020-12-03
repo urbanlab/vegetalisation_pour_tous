@@ -162,6 +162,8 @@
 }
 #carteInteractive{
     float: left;
+    height: 500px;
+    width: 500px;
 }
 
 /* QUOI PLANTER */
