@@ -93,8 +93,10 @@ function afficherDetailsPlante(blocOriginel={}){
 function genererCarte(){
     let mymap = L.map('carteInteractive').setView([45.75, 4.85], 12);
 
+
     L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-        maxZoom: 18,
+        maxZoom: 12,
+        minZoom: 12,
         attribution: '<a href="https://www.openstreetmap.org/">OpenStreetMap</a> | ' +
             '<a href="https://www.mapbox.com/">Mapbox</a>',
         id: 'mapbox.streets'
