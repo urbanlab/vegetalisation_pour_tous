@@ -120,6 +120,14 @@ function afficherDetailsPlante(blocOriginel={}){
     }
 }
 
+function retourAccueilQuoiPlanter(){
+    // 1° AFFICHER LA LISTE DES PLANTES.
+    document.getElementById('sousBlocListePlantes').style.display='block';
+    // 2° MASQUER LE BLOC DESCRIPTIF.
+    document.getElementById('presentationPlante').style.display='none';
+    document.getElementById('vousAimerezAussi').style.display='none';
+}
+
 /*
                             GESTION DE LA CARTE
  */
