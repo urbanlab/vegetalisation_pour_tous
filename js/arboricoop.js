@@ -8,6 +8,10 @@ function activerCompteur(){
     compteur.innerText = parseInt(compteur.innerText) + intervalle;
 }
 
+function peuplerContenuQuoiPlanter(){
+
+}
+
 
 /*
                             GESTION DE LA CARTE
