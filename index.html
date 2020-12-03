@@ -22,7 +22,7 @@
     crossorigin="">
     </script>
 </head>
-<body onload="setInterval(activerCompteur, 1000 * 2);">
+<body onload="setInterval(activerCompteur, 1000 * 2);genererCarte();">
     <div id="enTete">
         <nav>
             <div id="blocGaucheEnTete">
@@ -207,28 +207,67 @@
             </div>
         </div>
 
-        <div id="quoiPlanter">
-            <div id="quoiPlanterContenu">
-                <h3>Quoi planter ?</h3>
-                <p id="texteQuoiPlanter"></p>
-                <p id="quoiPlanterBoutonParcourir">Parcourir</p>
-            </div>
+    <div id="quoiPlanter">
+        <div id="quoiPlanterContenu">
+            <h3>Quoi planter ?</h3>
+            <p id="texteQuoiPlanter">
+                Découvrez notre sélection d’arbre que vous pourrez planter chez vous, provenant directement de pépiniéristes Lyonnais.
+            </p>
+            <a href="quoiplanter.html"><p id="quoiPlanterBoutonParcourir">Parcourir</p></a>
         </div>
 
-        <div id="nousContacter">
-            <h3>Nous contacter</h3>
-            <div>
-                <div id="blocFormulaireContact"></div>
-                <div id="blocPhotoFormulaireContact"></div>
+    <div id="nousContacter">
+        <h3>Nous contacter</h3>
+        <div>
+            <div id="blocFormulaireContact">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Vous êtes :</p>
+                            <input type="text"> </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Nom de la structure :</p>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <p>Adresse :</p>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Numéro de téléphone :</p>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <p>Mail :</p>
+                            <input type="text">
+                        </td>
+                    </tr>
+                </table>
+                <label>Résumez-nous votre projet :</label>
+                <textarea></textarea>
+                <button>ENVOYER</button>
+                <p>
+                    Hôtel de la Métropole<br>
+                    Adresse : 20 rue du Lac 69 003 Lyon<br>
+                    Tél : 04 78 63 40 40<br>
+                    Horaires d'ouverture au public : du lundi au vendredi de 7h30 à 18h30
+                </p>
+
             </div>
+            <div id="blocPhotoFormulaireContact"></div>
         </div>
     </main>
 
-    <div id="piedDePage">
+    <footer id="piedDePage">
         <div id="piedDePageGauche">Mentions légales Contact Se connecter</div>
         <div id="piedDePageCentre">LOGO MÉTROPOLE</div>
         <div id="piedDePageDroite">Un site de la Métropole de Lyon, YT, TWT FB</div>
-    </div>
+    </footer>
 
     <script src="js/arboricoop.js"></script>
 </body>
