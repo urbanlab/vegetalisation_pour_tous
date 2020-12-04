@@ -50,6 +50,14 @@
 
         <div data-include="htmlparts/monespace-header.html"></div>
 
+        <div id="menu">
+            <nav>
+                <a href="#" class="active">Mon arbre</a>
+                <a href="evenements.html">Evènements</a>
+            </nav>
+            <div class="sep"></div>
+        </div>
+
         <div class="contentcentered">
             <img src="img/content/feuillou.png" width="70%"/>
         </div>
@@ -59,7 +67,7 @@
         </div>
         <div class="wrap">
             <h3>Carnet de Santé</h3>
-            <div class="accordeon">
+            <div class="accordion">
                 <ul>
                     <li>
                         <div data-include="htmlparts/chevron.html"></div>
@@ -107,12 +115,19 @@ crossorigin="anonymous"></script>
 <script>
 $( document ).ready(function() {
     $('.detail').hide();
-    $('.accordeon li').on('click', function() {
+    $('.accordion li').on('click', function() {
         var id = $(this).find('div.detail').attr("id");
-        $('#'+id).show(300);
+        // Fermer
+        if ($('#'+id).hasClass("active")) {
+            $('#'+id).removeClass("active").hide(300);
+        } else {
+            // ouvrir
+            $('#'+id).addClass("active").show(300);
+        }
+        // Fermer tous les autres
         $('.detail').each(function(){
             if ($(this).attr("id") != id) {
-                $(this).hide(300);
+                $(this).removeClass("active").hide(300);
             }
         });
     });

@@ -36,6 +36,7 @@ p, li{
 }
 a{
     color: inherit;
+    z-index: 110000;
     text-decoration: none;
 }
 
@@ -68,8 +69,8 @@ main,
     float: right;
 }
 
-#connecter{
-
+#connecter:hover{
+    background-color: var(--color-vert);
 }
 
 #imageEnTete{
@@ -176,7 +177,7 @@ input{
     display: inline-block;
 }
 #imageMiseEnRelation{
-    background-image: url("../img/dessin/arbre.png");
+    background-image: url("../img/dessin/relation.png");
 }
 #imagePlantation{
     background-image: url("../img/dessin/plantation.png");
@@ -316,7 +317,8 @@ input{
     border-radius:4px;
     color: var(--color-fond);
     font-weight: bold;
-
+    transition: all ease .3s;;
+    cursor: pointer;
 }
 .boutonCarroussel{
     float: left;
