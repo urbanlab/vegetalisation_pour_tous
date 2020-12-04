@@ -31,23 +31,23 @@ const arbustes = {
         "forme":"",
         "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
         "emplacementImage":"arbre1.jpg"
+    },
+    "BERBERIS thunbergii":{
+        "origine":"",
+        "feuillage":"caduc",
+        "dimension": "",
+        "forme":"",
+        "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+        "emplacementImage":"arbre5.jpg"
+    },
+    "BERBERIS thunbergii porpre":{
+        "origine":"",
+        "feuillage":"caduc",
+        "dimension": "",
+        "forme":"",
+        "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+        "emplacementImage":"arbre6.jpg"
     }
-    // "BERBERIS thunbergii vert":{
-    //     "origine":"",
-    //     "feuillage":"caduc",
-    //     "dimension": "",
-    //     "forme":"",
-    //     "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
-    //     "emplacementImage":"arbre5.jpg"
-    // },
-    // "BERBERIS thunbergii vert":{
-    //     "origine":"",
-    //     "feuillage":"caduc",
-    //     "dimension": "",
-    //     "forme":"",
-    //     "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
-    //     "emplacementImage":"arbre6.jpg"
-    // }
 };
 
 /**
