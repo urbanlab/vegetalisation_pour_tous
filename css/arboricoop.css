@@ -476,3 +476,6 @@ textarea{
     text-align: center;
     /* border: var(--color-vert) solid 2px; */
 }
+#presentationPlante{
+    display: none;
+}

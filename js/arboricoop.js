@@ -72,7 +72,7 @@ function basculerCouleursChoixQuoiPlanter(choixTypePlante='arbustes'){
     let blocChoixActif = document.getElementById('choixArbres');
     let blocChoixInactif = document.getElementById('choixArbustes');
 
-    let arbustre = document.getElementById('arbuste');
+    let arbuste = document.getElementById('arbuste');
     let arbre = document.getElementById('arbre');
 
     if (choixTypePlante==='arbustes'){
