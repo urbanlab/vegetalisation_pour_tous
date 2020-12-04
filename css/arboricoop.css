@@ -36,6 +36,7 @@ p, li{
 }
 a{
     color: inherit;
+    z-index: 110000;
     text-decoration: none;
 }
 
@@ -68,8 +69,8 @@ main,
     float: right;
 }
 
-#connecter{
-
+#connecter:hover{
+    background-color: var(--color-vert);
 }
 
 #imageEnTete{
@@ -176,7 +177,7 @@ input{
     display: inline-block;
 }
 #imageMiseEnRelation{
-    background-image: url("../img/dessin/arbre.png");
+    background-image: url("../img/dessin/relation.png");
 }
 #imagePlantation{
     background-image: url("../img/dessin/plantation.png");
@@ -229,7 +230,7 @@ input{
 
 #imageCO2{
     /* Image manquante */
-    background-image: url("../img/dessin/CO2.png");
+    background-image: url("../img/dessin/co2.png");
 }
 #imageDiminutionChaleur{
     /* Image manquante */
@@ -316,7 +317,8 @@ input{
     border-radius:4px;
     color: var(--color-fond);
     font-weight: bold;
-
+    transition: all ease .3s;;
+    cursor: pointer;
 }
 .boutonCarroussel{
     float: left;
@@ -443,6 +445,7 @@ footer div{
 textarea{
         width: 94%;
     height: 58px;
+    resize: none;
 }
 #piedDePageCentre{
     margin-left: 25%;

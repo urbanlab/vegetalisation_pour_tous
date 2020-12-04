@@ -22,7 +22,7 @@ const arbustes = {
         "dimension": "H. 1.50m/2m",
         "forme":"touffe",
         "descriptif":"Port dressé. Très rustique, tous types de sols, ce mahonia a l'avantage de mieux vieillir qu'aquifolium. Très apprécié pour son feuillage vert pouvant être veiné de jaune et de rouge, selon les terrains et l'exposition. Fleurs jaune soufre en longues grappes étalées sur le feuillage au sommet des rameaux. Très employé en massif, jardinière, rocaille, banquette.",
-        "emplacementImage":"arbre2.jpg"
+        "emplacementImage":"arbre4.jpg"
     },
     "BERBERIS thunbergii vert":{
         "origine":"",
@@ -31,6 +31,22 @@ const arbustes = {
         "forme":"",
         "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
         "emplacementImage":"arbre1.jpg"
+    },
+    "BERBERIS thunbergii":{
+        "origine":"",
+        "feuillage":"caduc",
+        "dimension": "",
+        "forme":"",
+        "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+        "emplacementImage":"arbre5.jpg"
+    },
+    "BERBERIS thunbergii porpre":{
+        "origine":"",
+        "feuillage":"caduc",
+        "dimension": "",
+        "forme":"",
+        "descriptif":"Espèce très intéressante, pour haie basse ou moyenne, compacte, très belle coloration automnale rouge orangé, fruits rouges décoratifs après la chute des feuilles. Tous types de sols. Densité de plantation au ml : écartement égal à la taille plantée (ex. sujet de 40/60 = écartement de 40 cm).",
+        "emplacementImage":"arbre6.jpg"
     }
 };
 
