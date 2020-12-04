@@ -55,14 +55,21 @@ function montrerChoixQuoiPlanter(choixTypePlante='arbustes'){
 function basculerCouleursChoixQuoiPlanter(choixTypePlante='arbustes'){
     let blocChoixActif = document.getElementById('choixArbres');
     let blocChoixInactif = document.getElementById('choixArbustes');
+
+    let arbustre = document.getElementById('arbuste');
+    let arbre = document.getElementById('arbre');
+
     if (choixTypePlante==='arbustes'){
         blocChoixActif = document.getElementById('choixArbustes');
         blocChoixInactif = document.getElementById('choixArbres');
     }
-    blocChoixActif.style.backgroundColor='green';
-    blocChoixActif.style.color='white';
+    blocChoixActif.style.backgroundColor='var(--color-vert)';
+    blocChoixActif.style.color='var(--color-fond)';
+
     blocChoixInactif.style.backgroundColor='white';
-    blocChoixInactif.style.color='green';
+    blocChoixInactif.style.color='var(--color-vert)';
+
+    // arbre.style.color.='var'
 }
 
 /**

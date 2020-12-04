@@ -20,8 +20,8 @@ h4{
 }
 
 /* nav{
-    position: fixed;
-    width: 100%;
+position: fixed;
+width: 100%;
 } */
 
 h3{
@@ -39,7 +39,12 @@ a{
     text-decoration: none;
 }
 
-main{
+#rejoignezNous{
+    width: 45%;
+}
+
+main,
+.wrap{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -54,8 +59,8 @@ main{
     float: left;
     background-image: url(../img/dessin/planseve.png);
     background-repeat: no-repeat;
-        background-size: contain;
-        margin: 5px;
+    background-size: contain;
+    margin: 5px;
     width: 100px;
     height: 50px;
 }
@@ -113,11 +118,46 @@ main{
     clear: both;
     width: 100%;
     height: 500px;
-    background-image: url("../img/image/miseEnSituation.png");
+    background-image: url("../img/dessin/banniere2.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
+#projetsRealises{
+    margin-bottom: 600px;
+}
+
+#commentCaMarche{
+    margin-bottom: 550px;
+}
+#avantages{
+    margin-bottom: 400px;
+}
+#carteDeLyon{
+    margin-bottom: 600px;
+}
+
+.blocPlanteAChoisir{
+    width: calc(25% - 25px);
+    height: calc(25vw - 25px);
+    object-fit: cover;
+    margin: 10px;
+    transition: all ease .3s;
+    border-radius: 4px;
+}
+.blocPlanteAChoisir:hover{
+    background-color: var(--color-vert);
+    filter: grayscale(1);
+    cursor: pointer;
+}
+
+input{
+        width: 89%;
+}
+
+
 /* COMMENT ÇA MARCHE */
 .blocCommentCaMarche{
     float: left;
@@ -129,7 +169,7 @@ main{
 }
 .iconeCommentCaMarche{
     height: 150px;
-    width: 150px;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -151,41 +191,60 @@ main{
 /* AVANTAGES */
 #avantages{
     clear: both;
+    position: relative;
+    margin-top: 100px;
 }
 .blocAvantages{
     float: left;
     width: 14%;
     margin-left: 2%;
 }
+
+.blocAvantages:nth-child(1){
+    margin-left: 0;
+
+}
+
 .imageAvantages{
     height: 150px;
     width: 150px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
 }
+
+#carousel{
+    width:50%;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    background-size: contain;
+    background-image: url(../img/dessin/carousel.png);
+}
+
 #imageCO2{
     /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/CO2.png");
 }
 #imageDiminutionChaleur{
     /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/moins.png");
 }
 #imageFoncier{
     /* Image manquante */
-    background-image: url("../img/dessin/foncier.png");
+    background-image: url("../img/dessin/foncier2.png");
 }
 #imageCadreDeVie{
     /* Image manquante */
-    background-image: url("../img/dessin/label.png");
+    background-image: url("../img/dessin/good.png");
 }
 #imageLienSocial{
     /* Image manquante */
     background-image: url("../img/dessin/lien.png");
 }
 #imageLabelSeve{
-    background-image: url("../img/dessin/niveau1.png");
+    background-image: url("../img/dessin/lab.png");
 }
 
 /* PROJETS RÉALISÉS */
@@ -197,7 +256,7 @@ main{
     height: 400px;
     background-size: cover;
     border-radius: 4px;
-    background-image: url("../img/image/image.png");
+    background-image: url("../img/image/mise.jpg");
     float: left;
     margin-right: 50px;
 }
@@ -205,32 +264,42 @@ main{
     width: 45%;
     float: left;
 }
-
-#enTete nav{
-    margin: 0 30px;
+#choixArbustes,
+#choixArbres{
+    display: flex;
+    justify-content: center;
+    font-size: 25px
+}
+#choixArbustes p,
+#choixArbres p{
+        margin-top: 10px;
+    font-size: 23px;
+    font-weight: bold;
 }
 
-#enTete nav p:nth-child(2),
-#enTete nav p:nth-child(3){
+ nav{
+    margin: 0 30px;
+}
+ nav p:nth-child(2), nav p:nth-child(3){
     margin:  22px 15px 0 15px;
     transition: all ease .3s;
     cursor: pointer;
 }
-
-#enTete nav p:nth-child(2):hover,
-#enTete nav p:nth-child(3):hover{
+ nav p:nth-child(2):hover, nav p:nth-child(3):hover{
     color: var(--color-vert);
 }
-
-#enTete nav p{
+ nav p{
     transition: all ease .3s;
 
 }
-
-#enTete nav p:nth-child(1):hover{
+ nav p:nth-child(1):hover{
     transition: all ease .3s;
 
     background-color: var(--color-vert)
+}
+
+#boutonEnSavoirPlus{
+    margin-left: 21px;
 }
 
 #boutonEnSavoirPlus,
@@ -269,13 +338,28 @@ main{
     background-position: center;
     background-repeat: no-repeat;
 }
-#contenuDescription{
+#contenuDescription,
+#labelImage{
     float: left;
+    height: 300px;
+    background-image: url(../img/dessin/labelEcrire.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 18%;
 }
 #carteInteractive{
     float: right;
-    width: 60vw;;
+    /* pointer-events: none; */
+    width: 80%;
     height: 500px;
+}
+
+#quoiPlanterContenu h3{
+    color: var(--color-fond);
+}
+
+#descriptionProjetRealise h4{
+    font-size:40px;
 }
 
 td p{
@@ -305,7 +389,7 @@ td p{
 #nombreBailleurs p:nth-child(2),
 #nombreEntreprises p:nth-child(2){
     margin-top: 0;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 
@@ -352,22 +436,36 @@ footer{
 footer div{
     float: left;
 }
+textarea{
+        width: 94%;
+    height: 58px;
+}
 #piedDePageCentre{
     margin-left: 25%;
 }
 #piedDePageDroite{
     margin-left: 25%;
 }
+#piedDePage{
+    width: 100%;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/dessin/Footer2.png);
+}
 
 
 /*                              PAGE QUOI PLANTER                       */
 #cadreGeneral{
     clear: both;
+    border: 2px solid var(--color-vert);
 }
 #categories div{
+    cursor: pointer;
     float: left;
-    width: 40%;
-    padding-left: 9%;
+    height: 42px;
+    width: 50% ;
+    border-bottom: var(--color-vert) solid 2px;
     text-align: center;
-    border: green solid 2px;
+    /* border: var(--color-vert) solid 2px; */
 }

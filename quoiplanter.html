@@ -4,73 +4,114 @@
     <meta charset="UTF-8">
     <title>ArboriCoop</title>
     <link rel="stylesheet" href="css/arboricoop.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </head>
 <body onload="montrerChoixQuoiPlanter();">
+    <style media="screen">
+    .sep{
+        margin: auto;
+        width: 80% !important;
+        border: 1px solid #A4C08E !important;
+    }
+    nav, .contentcentered{
+        justify-content: center !important;
+    }
+    nav a{
+        margin: 0 50px;
+    }
+    .wrap{
+        margin: 0 auto;
+        max-width:1000px;
+    }
+    </style>
     <nav>
-        <div id="blocGaucheEnTete">
-            <p>ArboriCoop</p>
-        </div>
+        <a href="index.html">
+
+            <div id="blocGaucheEnTete">    </div>
+            </a>
         <div id="blocDroitEnTete">
-            <p>Quoi planter</p>
-            <p>Nous contacter</p>
-            <p>Se connecter</p>
+            <a href="monespace.html">
+                <p id="connecter">Se connecter</p>
+            </a>
+            <p>
+                <a href="index.html#nousContacter">
+                    Nous contacter
+                </a>
+            </p>
+            <p>
+                <a href="quoiplanter.html">
+                    Quoi planter
+                </a>
+            </p>
         </div>
     </nav>
-    <div id="cadreGeneral">
-        <div id="sousBlocListePlantes">
-            <div id="categories">
-                <div id="choixArbustes" onclick="montrerChoixQuoiPlanter('arbustes');"><img src="img/dessin/arbre.png" width="50px" height="50px" />Arbustes</div>
-                <div id="choixArbres" onclick="montrerChoixQuoiPlanter('arbres');"><img src="img/dessin/arbre.png" width="50px" height="50px" />Abres</div>
-            </div>
-            <div id="listePlantes">
+    <main>
+        <div id="cadreGeneral">
+            <div id="sousBlocListePlantes">
+                <div id="categories">
+                    <div id="choixArbustes" onclick="montrerChoixQuoiPlanter('arbustes');">
+                        <!-- <img src="img/dessin/arbre.png" width="50px" height="50px" /> -->
+                        <span id="arbustre" class="iconify" data-inline="false" data-icon="mdi:sprout-outline" style="color: #f4f4f4; font-size: 30px;margin: 7px 10px 00;"></span>
+                        <p>Arbustes</p>
+                    </div>
+                    <div id="choixArbres" onclick="montrerChoixQuoiPlanter('arbres');">
+                        <!-- <img src="img/dessin/arbre.png" width="50px" height="50px" /> -->
+                        <span id="arbre" class="iconify" data-inline="false" data-icon="mdi:tree" style="color: #a4c08e; font-size: 38.63333511352539px;margin: 2px 10px 00;"></span>
+                        <p>
+                            Arbres
+                        </p>
+                    </div>
+                </div>
+                <div id="listePlantes">
 
+                </div>
             </div>
-        </div>
-        <div id="presentationPlante">
-            <h5><span onclick="retourAccueilQuoiPlanter();">Accueil</span> - Arbuste</h5>
-            <div id="blocAffichePlante">
+            <div id="presentationPlante">
+                <h5><span onclick="retourAccueilQuoiPlanter();">Accueil</span> - Arbuste</h5>
+                <div id="blocAffichePlante">
 
-            </div>
-            <div id="blocDescriptionPlante">
-                <h2 id="nomPlante"></h2>
-                <div id="caracteristiquesPlante">
-                    <h3>Caractéristiques</h3>
-                    <table>
-                        <tr>
-                            <th>Type</th>
-                            <td id="typePlante"></td>
-                        </tr>
-                        <tr>
-                            <th>Origine</th>
-                            <td id="originePlante"></td>
-                        </tr>
-                        <tr>
-                            <th>Feuillage</th>
-                            <td id="feuillagePlante"></td>
-                        </tr>
-                        <tr>
-                            <th>Dimension</th>
-                            <td id="dimensionPlante"></td>
-                        </tr>
-                        <tr>
-                            <th>Forme</th>
-                            <td id="formePlante"></td>
-                        </tr>
-                    </table>
-                    <div>
-                        <h3>Description</h3>
-                        <p id="descriptionPlante"></p>
+                </div>
+                <div id="blocDescriptionPlante">
+                    <h2 id="nomPlante"></h2>
+                    <div id="caracteristiquesPlante">
+                        <h3>Caractéristiques</h3>
+                        <table>
+                            <tr>
+                                <th>Type</th>
+                                <td id="typePlante"></td>
+                            </tr>
+                            <tr>
+                                <th>Origine</th>
+                                <td id="originePlante"></td>
+                            </tr>
+                            <tr>
+                                <th>Feuillage</th>
+                                <td id="feuillagePlante"></td>
+                            </tr>
+                            <tr>
+                                <th>Dimension</th>
+                                <td id="dimensionPlante"></td>
+                            </tr>
+                            <tr>
+                                <th>Forme</th>
+                                <td id="formePlante"></td>
+                            </tr>
+                        </table>
+                        <div>
+                            <h3>Description</h3>
+                            <p id="descriptionPlante"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="vousAimerezAussi">
+                    <h2>Vous aimerez aussi :</h2>
+                    <div id="plantesVousAimerezAussi">
+
                     </div>
                 </div>
             </div>
-            <div id="vousAimerezAussi">
-                <h2>Vous aimerez aussi :</h2>
-                <div id="plantesVousAimerezAussi">
-
-                </div>
-            </div>
         </div>
-    </div>
+    </main>
     <script src="js/arboricoop.js"></script>
 </body>
 </html>

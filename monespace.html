@@ -9,7 +9,45 @@
     <link href="css/arboricoop.css" rel="stylesheet">
 </head>
 <body>
+    <style media="screen">
+    .sep{
+        margin: auto;
+        width: 80% !important;
+        border: 1px solid #A4C08E !important;
+    }
+    nav, .contentcentered{
+        justify-content: center !important;
+    }
+    nav a{
+        margin: 0 50px;
+    }
+    .wrap{
+        margin: 0 auto;
+        max-width:1000px;
+    }
+    </style>
+    <nav style="margin: 0 20px;width: calc(100% - 40px);position:fixed; z-index:100000;display: block;">
+        <a href="#imageEnTete">
+                <div id="blocGaucheEnTete"></div>
+        </a>
+        <div id="blocDroitEnTete">
+            <a href="monespace.html">
+                <p id="connecter">Se connecter</p>
+            </a>
+            <p>
+                <a href="#nousContacter">
+                    Nous contacter
+                </a>
+            </p>
+            <p>
+                <a href="quoiplanter.html">
+                    Quoi planter
+                </a>
+            </p>
+        </div>
+    </nav>
     <div class="content">
+
         <div data-include="htmlparts/monespace-header.html"></div>
 
         <div class="contentcentered">
@@ -19,63 +57,65 @@
         <div class="contentcentered">
             <img src="img/content/conseils.png" width="70%"/>
         </div>
+        <div class="wrap">
+            <h3>Carnet de Santé</h3>
+            <div class="accordeon">
+                <ul>
+                    <li>
+                        <div data-include="htmlparts/chevron.html"></div>
+                        <b>L'oïdium</b><br/>
+                        15/05/2020
+                        <div id="detail1" class="detail contentcentered">
+                            <img src="img/content/detail1.png" width="70%"/>
+                        </div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <div data-include="htmlparts/chevron.html"></div>
+                        <b>Contrôle</b><br/>
+                        20/07/2021
+                        <div id="detail2" class="detail contentcentered"></div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <div data-include="htmlparts/chevron.html"></div>
+                        <b>Contrôle</b><br/>
+                        10/08/2021
+                        <div id="detail3" class="detail contentcentered"></div>
+                        <hr/>
+                    </li>
+                    <li>
+                        <img src="img/image/button-pb.png"/>
+                        <div id="detail4" class="detail contentcentered">
+                            <img src="img/content/signaler-form.png" width="100%"/>
+                        </div>
 
-        <h3>Carnet de Santé</h3>
-        <div class="accordeon">
-            <ul>
-                <li>
-                    <div data-include="htmlparts/chevron.html"></div>
-                    <b>L'oïdium</b><br/>
-                    15/05/2020
-                    <div id="detail1" class="detail contentcentered">
-                        <img src="img/content/detail1.png" width="70%"/>
-                    </div>
-                    <hr/>
-                </li>
-                <li>
-                    <div data-include="htmlparts/chevron.html"></div>
-                    <b>Contrôle</b><br/>
-                    20/07/2021
-                    <div id="detail2" class="detail contentcentered"></div>
-                    <hr/>
-                </li>
-                <li>
-                    <div data-include="htmlparts/chevron.html"></div>
-                    <b>Contrôle</b><br/>
-                    10/08/2021
-                    <div id="detail3" class="detail contentcentered"></div>
-                    <hr/>
-                </li>
-                <li>
-                    <img src="img/image/button-pb.png"/>
-                    <div id="detail4" class="detail contentcentered">
-                        <img src="img/content/signaler-form.png" width="70%"/>
-                    </div>
-                    
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
-<footer data-include="htmlparts/footer.html"></footer>
+    <footer id="piedDePage">
+    </footer>
 </body>
 <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous"></script>
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous"></script>
 
 <script>
-    $( document ).ready(function() {
-        $('.detail').hide();
-        $('.accordeon li').on('click', function() {
-            var id = $(this).find('div.detail').attr("id");
-            $('#'+id).show(300);
-            $('.detail').each(function(){
-                if ($(this).attr("id") != id) {
-                    $(this).hide(300);
-                }
-            });
+$( document ).ready(function() {
+    $('.detail').hide();
+    $('.accordeon li').on('click', function() {
+        var id = $(this).find('div.detail').attr("id");
+        $('#'+id).show(300);
+        $('.detail').each(function(){
+            if ($(this).attr("id") != id) {
+                $(this).hide(300);
+            }
         });
     });
+});
 </script>
 </html>

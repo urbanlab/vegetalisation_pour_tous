@@ -26,9 +26,7 @@
     <div id="enTete">
         <nav style="margin: 0 20px;width: calc(100% - 40px);position:fixed; z-index:100000">
             <a href="#imageEnTete">
-            <div id="blocGaucheEnTete">
-                <!-- <p>ArboriCoop</p> -->
-            </div>
+                <div id="blocGaucheEnTete"></div>
             </a>
             <div id="blocDroitEnTete">
                 <a href="monespace.html">
@@ -78,9 +76,8 @@
         </div>
 
         <div id="imageCentrale"></div>
-
         <div id="commentCaMarche">
-            <h3>Comment ça marche ?</h3>
+            <h3>La métropole à vos côtés</h3>
             <div id="defileCommentCaMarche">
                 <div id="miseEnRelation" class="blocCommentCaMarche">
                     <div id="imageMiseEnRelation" class="iconeCommentCaMarche"></div>
@@ -118,9 +115,8 @@
                 </div>
             </div>
         </div>
-
         <div id="avantages">
-            <h3>Les avantages</h3>
+            <h3>Les Avantages</h3>
             <div id="defileLesAvantages">
                 <div id="co2" class="blocAvantages">
                     <div class="imageAvantages" id="imageCO2"></div>
@@ -167,7 +163,7 @@
                 <div id="imageProjetsRealises"></div>
                 <div id="blocDroitProjets">
                     <div id="descriptionProjetRealise">
-                        <h3>Sanofy</h3>
+                        <h4>Sanofy</h4>
                         <ul>
                             <li>Plantation de 30 arbres ainsi que de 20 arbustes.</li>
                             <li>Ateliers avec les enfants du personnels, afin de les sensibiliser sur notre impact, sur la biodiversité.</li>
@@ -175,140 +171,153 @@
                         </ul>
                         <p id="boutonEnSavoirPlus">EN SAVOIR PLUS</p>
                     </div>
-                    <div id="boutonsCarrousel">
-                        <div class="boutonCarroussel">«</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">o</div>
-                        <div class="boutonCarroussel">»</div>
-                    </div>
-                </div>
+                    <div id="carousel"></div>
+                    <!-- <div id="boutonsCarrousel">
+                    <div class="boutonCarroussel">«</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">o</div>
+                    <div class="boutonCarroussel">»</div>
+                </div> -->
             </div>
         </div>
+    </div>
 
-        <div id="carteDeLyon">
-            <h3>Ils nous ont fait confiance</h3>
-            <div>
-                <table id="contenuDescription">
+    <div id="carteDeLyon">
+        <h3>Ils nous ont fait confiance</h3>
+        <div>
+            <div id="labelImage"></div>
+            <!-- <table id="contenuDescription">
+            <tr>
+            <td class="imageNiveau" id="imageNiveau1"></td>
+            <td>
+            <p>Nv1 : Jeune Pousse</p>
+            <p>10 arbres plantés</p>
+        </td>
+    </tr>
+    <tr>
+    <td class="imageNiveau" id="imageNiveau2"></td>
+    <td>
+    <p>Nv2 : Grand Chêne</p>
+    <p>100 arbres plantés</p>
+</td>
+</tr>
+<tr>
+<td class="imageNiveau" id="imageNiveau3"></td>
+<td>
+<p>Nv3 : Vieille Branche</p>
+<p>300 arbres plantés</p>
+</td>
+</tr>
+</table> -->
+<div id="carteInteractive"></div>
+</div>
+</div>
+<br><br><br>
+</main>
+
+<div id="quoiPlanter">
+    <div id="quoiPlanterContenu">
+        <h3>Quoi planter ?</h3>
+        <p id="texteQuoiPlanter">
+            Découvrez notre sélection d’arbre que vous pourrez planter chez vous, provenant directement de pépiniéristes Lyonnais.
+        </p>
+        <a href="quoiplanter.html"><p id="quoiPlanterBoutonParcourir">Parcourir</p></a>
+    </div>
+</div>
+<div class="wrap">
+    <div id="rejoignezNous">
+        <h3 style="margin-bottom:10px">Rejoignez-nous</h3>
+        <p>
+            Vous avez un projet de végétalisation ? La métropole de Lyon vous accompagne dans votre démarche. Elle vous met en relation avec un pépiniériste et des experts, afin de construire le projet qui vous ressemble, de la simple graine à une forêt dense.
+
+            Vous n’avez pas de terrain à végétaliser ? Pas de panique, devenez parrain d’un des nombreux partenaires en attente de végétalisation !
+        </p>
+        <a href="#" style="    font-weight: 800;color: var(--color-vert);
+    text-decoration: underline;">
+            télécharger la fiche projet
+        </a>
+    </div>
+
+    <div id="nousContacter">
+        <h3>Nous contacter</h3>
+        <div>
+            <div id="blocFormulaireContact">
+                <table style="width:100%">
                     <tr>
-                        <td class="imageNiveau" id="imageNiveau1"></td>
                         <td>
-                            <p>Nv1 : Jeune Pousse</p>
-                            <p>10 arbres plantés</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="imageNiveau" id="imageNiveau2"></td>
-                        <td>
-                            <p>Nv2 : Grand Chêne</p>
-                            <p>100 arbres plantés</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="imageNiveau" id="imageNiveau3"></td>
-                        <td>
-                            <p>Nv3 : Vieille Branche</p>
-                            <p>300 arbres plantés</p>
-                        </td>
-                    </tr>
-                </table>
-                <div id="carteInteractive"></div>
-            </div>
-        </div>
-        <br><br><br>
-
-        <div id="quoiPlanter">
-            <div id="quoiPlanterContenu">
-                <h3>Quoi planter ?</h3>
-                <p id="texteQuoiPlanter">
-                    Découvrez notre sélection d’arbre que vous pourrez planter chez vous, provenant directement de pépiniéristes Lyonnais.
-                </p>
-                <a href="quoiplanter.html"><p id="quoiPlanterBoutonParcourir">Parcourir</p></a>
-            </div>
-        </div>
-
-
-        <div id="nousContacter">
-            <h3>Nous contacter</h3>
-            <div>
-                <div id="blocFormulaireContact">
-                    <table>
+                            <p>Vous êtes :</p>
+                            <input type="text"> </td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>
-                                <p>Vous êtes :</p>
-                                <input type="text"> </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Nom de la structure :</p>
-                                    <input type="text">
-                                </td>
-                                <td>
-                                    <p>Adresse :</p>
-                                    <input type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Numéro de téléphone :</p>
-                                    <input type="text">
-                                </td>
-                                <td>
-                                    <p>Mail :</p>
-                                    <input type="text">
-                                </td>
-                            </tr>
-                        </table>
-                        <label>Résumez-nous votre projet :</label>
-                        <br>
-                        <textarea></textarea>
-                        <button>ENVOYER</button>
-                        <p>
-                            Hôtel de la Métropole<br>
-                            Adresse : 20 rue du Lac 69 003 Lyon<br>
-                            Tél : 04 78 63 40 40<br>
-                            Horaires d'ouverture au public : du lundi au vendredi de 7h30 à 18h30
-                        </p>
+                                <p>Nom de la structure :</p>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <p>Adresse :</p>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Numéro de téléphone :</p>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <p>Mail :</p>
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </table>
+                    <label>Résumez-nous votre projet :</label>
+                    <br>
+                    <textarea></textarea>
+                    <br><br>
+                    <button>ENVOYER</button>
+                    <p>
+                        Hôtel de la Métropole<br>
+                        Adresse : 20 rue du Lac 69 003 Lyon<br>
+                        Tél : 04 78 63 40 40<br>
+                        Horaires d'ouverture au public : du lundi au vendredi de 7h30 à 18h30
+                    </p>
 
-                    </div>
-                    <div id="blocPhotoFormulaireContact"></div>
                 </div>
-            </main>
+                <div id="blocPhotoFormulaireContact"></div>
+            </div>
+        </div>
 
-            <footer id="piedDePage">
-                <div id="piedDePageGauche">Mentions légales Contact Se connecter</div>
-                <div id="piedDePageCentre">LOGO MÉTROPOLE</div>
-                <div id="piedDePageDroite">Un site de la Métropole de Lyon, YT, TWT FB</div>
-            </footer>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+        <footer id="piedDePage">
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
 
 
-            <script type="text/javascript">
-                $("a[href*='#']").click(function() {
-                    if (
-                        location.hostname == this.hostname
-                        && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-                        ) {
-                            var anchor = $(this.hash);
-                            anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-                            if ( anchor.length ) {
-                                $("html, body").animate( { scrollTop: anchor.offset().top }, 800);
-                            }
-                        }
-                    });
+        <script type="text/javascript">
+        $("a[href*='#']").click(function() {
+            if (
+                location.hostname == this.hostname
+                && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
+                ) {
+                    var anchor = $(this.hash);
+                    anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+                    if ( anchor.length ) {
+                        $("html, body").animate( { scrollTop: anchor.offset().top }, 800);
+                    }
+                }
+            });
 
-                    // <!-- let mars = document.getElementById("imgMars"); -->
-                    var offset =0;
+            // <!-- let mars = document.getElementById("imgMars"); -->
+            var offset =0;
 
-                    window.addEventListener('scroll', function(){
+            window.addEventListener('scroll', function(){
 
-                        var hauteur = document.body.clientHeight;
-                        var value = window.scrollY;
-                    })
+                var hauteur = document.body.clientHeight;
+                var value = window.scrollY;
+            })
             </script>
 
             <script src="js/arboricoop.js"></script>
