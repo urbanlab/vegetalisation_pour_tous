@@ -445,6 +445,7 @@ footer div{
 textarea{
         width: 94%;
     height: 58px;
+    resize: none;
 }
 #piedDePageCentre{
     margin-left: 25%;
