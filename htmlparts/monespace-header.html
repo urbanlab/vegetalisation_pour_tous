@@ -18,30 +18,32 @@ nav, .contentcentered {
 }
 
 nav a {
-    color:#A4C08E;
+    /* color:#A4C08E; */
     text-decoration: none;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.contentcentered, .accordeon {
+.contentcentered, .accordion {
     margin-top:40px;
 }
 
-.accordeon ul {
+.accordion ul {
     list-style: none;
 }
 
-.accordeon ul li { 
+.accordion ul li { 
     margin-bottom:20px;
     cursor: pointer;
 }
 
-.accordeon ul li b{
+.accordion ul li b{
     font-size: 24px;
 }
 
-.accordeon ul li div.detail{
+.chevronOuvert {
+    transform: rotate(90);
+    transition: all ease 0.3s;
 
 }
 
@@ -80,13 +82,11 @@ nav a {
     border:none;
 }
 
+.active {
+    color:var(--color-vert);
+    font-weight: bold;
+    cursor: default;
+}
+
 </style>
 <img id="enteteMonespace" src="/img/image/banniere-monespace.png"/>  
-
-<div id="menu">
-    <nav>
-        <a href="monespace.html">Mon arbre</a>
-        <a href="evenements.html">Evènements</a>
-    </nav>
-    <div class="sep"></div>
-</div>
